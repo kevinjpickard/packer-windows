@@ -85,6 +85,7 @@
         "./scripts/microsoft-updates.bat",
         "./scripts/win-updates.ps1",
         "./scripts/openssh.ps1"
+        "./scripts/Install-WSL.ps1"
       ],
       "prlctl": [
         [

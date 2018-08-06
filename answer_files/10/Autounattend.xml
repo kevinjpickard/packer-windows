@@ -257,39 +257,9 @@
                     <Description>Disable password expiration for vagrant user</Description>
                 </SynchronousCommand>
                 <SynchronousCommand wcm:action="add">
-                    <CommandLine>cmd.exe /c PowerShell.exe Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux -NoRestart</CommandLine>
+                    <CommandLine>cmd.exe /c PowerShell.exe a:\Install-WSL.ps1</CommandLine>
                     <Order>25</Order>
-                    <Description>Enable WSL</Description>
-                </SynchronousCommand>
-                <SynchronousCommand wcm:action="add">
-                    <CommandLine>cmd.exe /c PowerShell.exe Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile C:\Windows\Temp\Ubuntu.appx -UseBasicParsing</CommandLine>
-                    <Order>26</Order>
-                    <Description>Download Ubuntu</Description>
-                </SynchronousCommand>
-                <SynchronousCommand wcm:action="add">
-                    <CommandLine>cmd.exe /c PowerShell.exe Rename-Item C:\Windows\Temp\Ubuntu.appx C:\Windows\Temp\Ubuntu.zip</CommandLine>
-                    <Order>27</Order>
-                    <Description>Rename Package</Description>
-                </SynchronousCommand>
-                <SynchronousCommand wcm:action="add">
-                    <CommandLine>cmd.exe /c PowerShell.exe New-Item -Path C:\ -Name Distros -Type Directory</CommandLine>
-                    <Order>28</Order>
-                    <Description>Create WSL Distro Directory Structure</Description>
-                </SynchronousCommand>
-                <SynchronousCommand wcm:action="add">
-                    <CommandLine>cmd.exe /c PowerShell.exe New-Item -Path C:\Distros -Name Ubuntu -Type Directory</CommandLine>
-                    <Order>29</Order>
-                    <Description>Create WSL Distro Directory Structure</Description>
-                </SynchronousCommand>
-                <SynchronousCommand wcm:action="add">
-                    <CommandLine>cmd.exe /c PowerShell.exe Expand-Archive C:\Windows\Temp\Ubuntu.zip C:\Distros\Ubuntu</CommandLine>
-                    <Order>30</Order>
-                    <Description>Extract Ubuntu</Description>
-                </SynchronousCommand>
-                <SynchronousCommand wcm:action="add">
-                    <CommandLine>cmd.exe /c PowerShell.exe C:\Distros\ubuntu.exe</CommandLine>
-                    <Order>31</Order>
-                    <Description>Setup Ubuntu</Description>
+                    <Description>Enable WSL + Ubuntu</Description>
                 </SynchronousCommand>
                 <!-- WITHOUT WINDOWS UPDATES -->
                 <!--
