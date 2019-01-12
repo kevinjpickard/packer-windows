@@ -48,8 +48,12 @@
                     Notice the addition of the `<Key>` element.
                 -->
                 <!-- Product Key from http://technet.microsoft.com/en-us/library/jj612867.aspx -->
-                <ProductKey>NPPR9-FWDCX-D2C8J-H872K-2YT43
-                    </ProductKey>
+                <!--<ProductKey>NPPR9-FWDCX-D2C8J-H872K-2YT43
+                    </ProductKey>-->
+                <ProductKey>
+                    <Key>J4TNY-87XRM-4T44W-63WBP-27JXM</Key>
+                    <WillShowUI>OnError</WillShowUI>
+                </ProductKey>
             </UserData>
             <ImageInstall>
                 <OSImage>
@@ -62,7 +66,7 @@
                     <InstallFrom>
                         <MetaData wcm:action="add">
                             <Key>/IMAGE/NAME</Key>
-                            <Value>Windows 10 Enterprise Evaluation</Value>
+                            <Value>Windows 10 Pro</Value>
                         </MetaData>
                     </InstallFrom>
                 </OSImage>

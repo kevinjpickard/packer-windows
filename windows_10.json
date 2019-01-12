@@ -7,12 +7,14 @@
       "iso_checksum": "{{user `iso_checksum`}}",
       "headless": "{{user `headless`}}",
       "boot_wait": "2m",
+      "version": 16,
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
-      "ssh_wait_timeout": "2h",
+      "ssh_wait_timeout": "4h",
       "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\"",
-      "guest_os_type": "windows8srv-64",
+      "guest_os_type": "windows9-64",
       "tools_upload_flavor": "windows",
+      "vmx_remove_ethernet_interfaces": true,
       "disk_size": "{{user `disk_size`}}",
       "vnc_port_min": 5900,
       "vnc_port_max": 5980,
@@ -85,7 +87,6 @@
         "./scripts/microsoft-updates.bat",
         "./scripts/win-updates.ps1",
         "./scripts/openssh.ps1"
-        "./scripts/Install-WSL.ps1"
       ],
       "prlctl": [
         [
@@ -135,13 +136,13 @@
     }
   ],
   "variables": {
-    "iso_url": "http://care.dlservice.microsoft.com/dl/download/C/3/9/C399EEA8-135D-4207-92C9-6AAB3259F6EF/10240.16384.150709-1700.TH1_CLIENTENTERPRISEEVAL_OEMRET_X64FRE_EN-US.ISO",
-    "iso_checksum_type": "sha1",
-    "iso_checksum": "56ab095075be28a90bc0b510835280975c6bb2ce",
+    "iso_url": "iso/Win10_1803_English_x64.iso",
+    "iso_checksum_type": "md5",
+    "iso_checksum": "986e2e17cf6b0b49141cd15699768e6e",
     "autounattend": "./answer_files/10/Autounattend.xml",
-    "headless": "true",
-    "cpus": "2",
-    "memory_size": "2048",
+    "headless": "false",
+    "cpus": "4",
+    "memory_size": "4096",
     "disk_size": "61440"
   }
 }
